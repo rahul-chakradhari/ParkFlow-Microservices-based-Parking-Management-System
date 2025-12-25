@@ -6,6 +6,16 @@ public class EntryResponse {
     private String slotId;
     private String message;
 
+    //constructors
+    public EntryResponse() {
+    }
+
+    public EntryResponse(String message, String slotId, String ticketId) {
+        this.message = message;
+        this.slotId = slotId;
+        this.ticketId = ticketId;
+    }
+
     //getters and setters
     public String getSlotId() {
         return slotId;

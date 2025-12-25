@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import service.ParkingService;
 
-@Service
+@RestController
 @RequestMapping("/parking")
 public class ParkingController {
 
