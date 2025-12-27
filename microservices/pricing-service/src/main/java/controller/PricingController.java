@@ -1,7 +1,7 @@
 package controller;
 
-import data_transfer_object.Payment;
-import data_transfer_object.Vehicle;
+import com.rahul.parking.pricing_service.entity.Payment;
+import com.rahul.parking.pricing_service.entity.Vehicle;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

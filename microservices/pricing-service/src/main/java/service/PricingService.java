@@ -1,6 +1,7 @@
 package service;
 
-import data_transfer_object.*;
+import com.rahul.parking.pricing_service.entity.Payment;
+import com.rahul.parking.pricing_service.entity.Vehicle;
 
 public class PricingService {
     public Payment pricingService(Vehicle vehicle) {
