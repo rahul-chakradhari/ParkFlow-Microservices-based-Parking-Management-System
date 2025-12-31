@@ -1,8 +1,7 @@
 
-package service;
-import data_transfer_object.*;
-
-import static enums.AdminActionType.*;
+package com.rahul.parking.admin_service.service;
+import com.rahul.parking.admin_service.data_transfer_object.AdminRequest;
+import com.rahul.parking.admin_service.data_transfer_object.AdminResponse;
 
 
 public class AdminService {
@@ -16,25 +15,24 @@ public class AdminService {
             response.setMessage("Invalid admin request");
             return response;
         }
-        //generating specific admin request reference
-        String referenceId = "ADMIN-" + System.currentTimeMillis();
 
         //available options for admin control
         switch (request.getAdminActionType()) {
             case USER_QUERY:
+                response.setSuccess(true);
+                response.setResolved(true);
                 response.setMessage("Query had been resolved ");
                 break;
-            case UPDATE_VEHICLE_NEW_PRICE:
-                response.setMessage("Vehicle New Price has been updated ");
-                break;
-            case EXTRA_FINE:
-                response.setMessage("Extra Fine has been updated ");
-                break;
             case SPECIAL_ENTRY:
-                response.setMessage("Special Entry is allowed for this vehicle ");
+                response.setSuccess(true);
+                response.setMessage("Special Entry is allowed for  vehicle "+request.getVehicleNumber()+"("+request.getVehicleType()+")");
                 break;
             case TICKET_REGENERATE:
-                response.setMessage("Ticket had been regenerated for Reference Id: " + referenceId);
+                response.setSuccess(true);
+                //generating specific admin request reference
+                String referenceId = "ADMIN-" + System.currentTimeMillis();
+                response.setReferenceId(referenceId);
+                response.setMessage("Ticket had been regenerated ");
                 break;
             default:
                 response.setSuccess(false);
