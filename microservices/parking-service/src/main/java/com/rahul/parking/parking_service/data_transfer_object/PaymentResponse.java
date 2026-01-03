@@ -6,11 +6,20 @@ public class PaymentResponse {
     private String id;
     private String ticketId;
     private Double amount;
-    private Boolean paymentStatus;
+    private boolean paymentStatus;
+    private String message;
 
     //getters and setters
     public String getId() {
         return id;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public void setId(String id) {
@@ -33,7 +42,7 @@ public class PaymentResponse {
         this.amount = amount;
     }
 
-    public Boolean getPaymentStatus() {
+    public boolean getPaymentStatus() {
         return paymentStatus;
     }
 
@@ -42,11 +51,12 @@ public class PaymentResponse {
     }
 
     //constructors
-    public PaymentResponse(Double amount, String id, Boolean paymentStatus, String ticketId) {
+    public PaymentResponse(Double amount, String id, Boolean paymentStatus, String ticketId, String message) {
         this.amount = amount;
         this.id = id;
         this.paymentStatus = paymentStatus;
         this.ticketId = ticketId;
+        this.message = message;
     }
 
     public PaymentResponse() {

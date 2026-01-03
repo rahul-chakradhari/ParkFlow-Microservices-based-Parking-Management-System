@@ -1,6 +1,7 @@
 package com.rahul.parking.parking_service.service;
 
 import com.rahul.parking.parking_service.data_transfer_object.*;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -11,10 +12,14 @@ import org.springframework.web.client.RestTemplate;
 public class ParkingService {
     private final RestTemplate restTemplate;
 
+    //implementing fallback mechanism using cache variable
+    private SlotResponse lastSuccessfulSlotResponse;
+
     public ParkingService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
+    @CircuitBreaker(name="slotcb",fallbackMethod = "entryFallback")
     //entry method
     public TicketResponse entry(EntryRequest request) {
         TicketResponse response = new TicketResponse();
@@ -54,10 +59,24 @@ public class ParkingService {
         response.setSlotId(slotResponse.getId());
         response.setParking(true);
         response.setMessage("Ticket had been generated.Please keep with you at the time of exit (failure of ticket costs 10 RS fine )");
-
+        lastSuccessfulSlotResponse = slotResponse;
         return response;
     }
 
+    // slot entry fallback mechanism
+    public TicketResponse entryFallback(EntryRequest request,Throwable ex){
+        TicketResponse response = new TicketResponse();
+        if(lastSuccessfulSlotResponse!=null){
+            response.setSlotId(lastSuccessfulSlotResponse.getId());
+            response.setParking(true);
+            response.setMessage("Slot is down.Currently retrieving data from previous successful cache data.");
+        }
+        response.setParking(false);
+        response.setMessage("Slot service unavailable.Please try again after sometimes");
+        return response;
+    }
+
+    @CircuitBreaker(name="pricingcb",fallbackMethod = "paymentFallback")
     //exit method
     public TicketResponse  exit(ExitRequest request) {
         TicketResponse response = new TicketResponse();
@@ -97,7 +116,18 @@ public class ParkingService {
         response.setSlotId(request.getSlotId());
         response.setMessage("vehicle exited successfully");
         return response;
+        }
+
+    // pricing service fallback mechanism
+    public TicketResponse paymentFallBack(ExitRequest request,Throwable ex){
+    TicketResponse response = new TicketResponse();
+        response.setTicketId(request.getTicketId());
+        response.setSlotId(request.getSlotId());
+        response.setParking(false);
+        response.setMessage("Pricing service is down.Please pay at counter");
+        return response;
     }
+
 
 
 }

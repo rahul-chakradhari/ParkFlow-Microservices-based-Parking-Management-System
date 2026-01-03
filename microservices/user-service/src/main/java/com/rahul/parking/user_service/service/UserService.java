@@ -1,6 +1,8 @@
+
 package com.rahul.parking.user_service.service;
 
 import com.rahul.parking.user_service.data_transfer_object.*;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -8,10 +10,15 @@ import org.springframework.web.client.RestTemplate;
 public class UserService {
     private final RestTemplate restTemplate;
 
+    //implementing fall back mechanism using cache variable
+    private ParkingResponse lastSuccessfulParkingResponse;
+
+
     public UserService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
+    @CircuitBreaker(name="parkingserviceCB",fallbackMethod="parkingEntryFallBack")
     public EntryResponse processEntry(EntryRequest request) {
         EntryResponse response = new EntryResponse();
 
@@ -44,6 +51,10 @@ public class UserService {
         response.setSlotId(parkingResponse.getSlotId());
         response.setParking(true);
         response.setMessage("You can park your vehicle now");
+
+        //storing previous success value in cache variable
+        lastSuccessfulParkingResponse = parkingResponse;
+
         return response;
     }
 
@@ -56,5 +67,20 @@ public class UserService {
 
         }
         return restTemplate.postForObject("http://parking-service/parking/exit",request,ParkingResponse.class);
+    }
+
+    //fallback mechanism
+    public EntryResponse parkingEntryFallBack(EntryRequest  request,Throwable ex){
+        EntryResponse response = new EntryResponse();
+        if(lastSuccessfulParkingResponse!=null){
+            response.setTicketId(lastSuccessfulParkingResponse.getTicketId());
+            response.setSlotId(lastSuccessfulParkingResponse.getSlotId());
+            response.setParking(true);
+            response.setMessage("Parking service is currently  down. Please try later.");
+            return response;
+        }
+        response.setParking(false);
+        response.setMessage("Parking service unavailable. Please try later.");
+        return response;
     }
 }
