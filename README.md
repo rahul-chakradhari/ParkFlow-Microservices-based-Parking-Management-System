@@ -134,7 +134,7 @@ Java Backend Developer | Microservices | Spring Boot<br>
 📞 Phone: +91 83058 25263<br>
 📧 Email: rahulchakradhari10september@gmail.com<br>
 🔗 LinkedIn: [https://www.linkedin.com/in/rahulchakradhari](https://www.linkedin.com/in/rahul-chakradhari-17a437217/)<br>
-💻 GitHub: [https://github.com/](https://github.com/rahul-chakradhari)<br>
+💻 GitHub: [https://github.com/rahul-chakradhari](https://github.com/rahul-chakradhari)<br>
 
 
 ⭐ If you found this project useful<br>
