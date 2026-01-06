@@ -16,7 +16,7 @@ ParkFlow solves these challenges by modeling parking as a distributed microservi
 
 🧩 Problem Statement
 
-Design and implement a parking system that can:<>
+Design and implement a parking system that can:
 
 ✅ Dynamically allocate parking slots<br>
 ✅ Generate and manage parking tickets<br>
