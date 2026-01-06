@@ -43,7 +43,7 @@ Designed around real-world parking domains
 | **Admin Service**   | Admin-only privileged operations          |
 | **Eureka Server**   | Service discovery                         |
 
-📷 High-Level Architecture Diagram
+📷 High-Level Architecture Diagram<br>
 <img width="1263" height="797" alt="architecture" src="https://github.com/user-attachments/assets/a04f98af-e7a9-46a5-ba88-219908fbede0" />
 
 ⚙️ Tech Stack
@@ -67,10 +67,10 @@ Implemented Circuit Breaker pattern using Resilience4j
 
 Added fallback responses for critical services
 
-🔌 Slot Service Fallback
+🔌 Slot Service Fallback<br>
 <img src="https://github.com/user-attachments/assets/5bfd7841-91cf-47ab-9c8a-d1cd0a749e1d" />
 
-💰 Pricing Service Fallback
+💰 Pricing Service Fallback<br>
 <img src="https://github.com/user-attachments/assets/0d1c7482-15ac-4218-9c5f-58f1bc1d8845" />
 
 🔐 Security Implementation
@@ -79,10 +79,10 @@ Role-based authorization (USER / ADMIN)
 In-memory authentication for simplicity
 Separate security configurations for user and admin services
 
-👤 User Authentication
+👤 User Authentication<br>
 <img src="https://github.com/user-attachments/assets/3e2b1f27-03e8-4e60-80c0-6e33048bc9b9" />
 
-🛡️ Admin Authorization
+🛡️ Admin Authorization<br>
 <img src="https://github.com/user-attachments/assets/41c57d44-144f-41a5-9868-6e0512e237f5" />
 
 ⚔️ Challenges & Solutions<br>
@@ -99,7 +99,7 @@ Separate security configurations for user and admin services
 ⚙️ Centralized configuration server<br>
 📊 Admin dashboard UI<br>
 
-📸 Screenshots
+📸 Screenshots<br>
 🧠 Complete Architecture Diagram<br>
 <img width="9135" height="8230" alt="full diagram" src="https://github.com/user-attachments/assets/aa8528a7-76bb-436e-ae97-902a57cb8add" />
 
