@@ -44,8 +44,7 @@ Designed around real-world parking domains
 | **Eureka Server**   | Service discovery                         |
 
 📷 High-Level Architecture Diagram
-
-
+<img width="1263" height="797" alt="architecture" src="https://github.com/user-attachments/assets/a04f98af-e7a9-46a5-ba88-219908fbede0" />
 
 ⚙️ Tech Stack
 
@@ -69,20 +68,22 @@ Implemented Circuit Breaker pattern using Resilience4j
 Added fallback responses for critical services
 
 🔌 Slot Service Fallback
+<img src="https://github.com/user-attachments/assets/5bfd7841-91cf-47ab-9c8a-d1cd0a749e1d" />
 
 💰 Pricing Service Fallback
+<img src="https://github.com/user-attachments/assets/0d1c7482-15ac-4218-9c5f-58f1bc1d8845" />
 
 🔐 Security Implementation
 
 Role-based authorization (USER / ADMIN)
-
 In-memory authentication for simplicity
-
 Separate security configurations for user and admin services
 
 👤 User Authentication
+<img src="https://github.com/user-attachments/assets/3e2b1f27-03e8-4e60-80c0-6e33048bc9b9" />
 
 🛡️ Admin Authorization
+<img src="https://github.com/user-attachments/assets/41c57d44-144f-41a5-9868-6e0512e237f5" />
 
 ⚔️ Challenges & Solutions
 Challenge	Solution
@@ -99,12 +100,23 @@ Securing APIs	Role-based access control
 
 📸 Screenshots
 🧠 Complete Architecture Diagram
+<img width="9135" height="8230" alt="full diagram" src="https://github.com/user-attachments/assets/aa8528a7-76bb-436e-ae97-902a57cb8add" />
+
 🧭 Eureka Dashboard
+<img width="1920" height="1080" alt="eureka dashboard" src="https://github.com/user-attachments/assets/f912a820-a09b-4c09-b33b-6015631d4d27" />
+
 📬 API Responses (Postman)
 🚗 User Entry
+<img src="https://github.com/user-attachments/assets/5c872509-f27e-4cbb-9a21-c9e9b0965de6" />
+
 🚪 User Exit
+<img src="https://github.com/user-attachments/assets/0c277908-3c1b-4b48-b297-b4ff0b9f1afb" />
+
 ⭐ Admin Special Entry
+<img src="https://github.com/user-attachments/assets/9a1dd4b3-4d17-4461-89a0-4bd5936011f0" />
+
 🔥 Circuit Breaker in Action
+<img src="https://github.com/user-attachments/assets/e5ab5faa-2192-4347-a90d-4bf995284446" />
 
 ▶️ How to Run Locally
 
