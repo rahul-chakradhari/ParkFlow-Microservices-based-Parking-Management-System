@@ -43,7 +43,7 @@ Designed around real-world parking domains
 | **Admin Service**   | Admin-only privileged operations          |
 | **Eureka Server**   | Service discovery                         |
 
-📷 High-Level Architecture Diagram<br>
+📷 High-Level Architecture Diagram<br><br>
 <img width="1263" height="797" alt="architecture" src="https://github.com/user-attachments/assets/a04f98af-e7a9-46a5-ba88-219908fbede0" />
 
 ⚙️ Tech Stack
@@ -67,10 +67,10 @@ Implemented Circuit Breaker pattern using Resilience4j
 
 Added fallback responses for critical services
 
-🔌 Slot Service Fallback<br>
+🔌 Slot Service Fallback<br><br>
 <img src="https://github.com/user-attachments/assets/5bfd7841-91cf-47ab-9c8a-d1cd0a749e1d" />
 
-💰 Pricing Service Fallback<br>
+💰 Pricing Service Fallback<br><br>
 <img src="https://github.com/user-attachments/assets/0d1c7482-15ac-4218-9c5f-58f1bc1d8845" />
 
 🔐 Security Implementation
@@ -79,10 +79,10 @@ Role-based authorization (USER / ADMIN)
 In-memory authentication for simplicity
 Separate security configurations for user and admin services
 
-👤 User Authentication<br>
+👤 User Authentication<br><br>
 <img src="https://github.com/user-attachments/assets/3e2b1f27-03e8-4e60-80c0-6e33048bc9b9" />
 
-🛡️ Admin Authorization<br>
+🛡️ Admin Authorization<br><br>
 <img src="https://github.com/user-attachments/assets/41c57d44-144f-41a5-9868-6e0512e237f5" />
 
 ⚔️ Challenges & Solutions<br>
@@ -100,23 +100,23 @@ Separate security configurations for user and admin services
 📊 Admin dashboard UI<br>
 
 📸 Screenshots<br>
-🧠 Complete Architecture Diagram<br>
+🧠 Complete Architecture Diagram<br><br>
 <img width="9135" height="8230" alt="full diagram" src="https://github.com/user-attachments/assets/aa8528a7-76bb-436e-ae97-902a57cb8add" />
 
-🧭 Eureka Dashboard<br>
+🧭 Eureka Dashboard<br><br>
 <img width="1920" height="1080" alt="eureka dashboard" src="https://github.com/user-attachments/assets/f912a820-a09b-4c09-b33b-6015631d4d27" />
 
 📬 API Responses (Postman)<br>
-🚗 User Entry<br>
+🚗 User Entry<br><br>
 <img src="https://github.com/user-attachments/assets/5c872509-f27e-4cbb-9a21-c9e9b0965de6" />
 
-🚪 User Exit<br>
+🚪 User Exit<br><br>
 <img src="https://github.com/user-attachments/assets/0c277908-3c1b-4b48-b297-b4ff0b9f1afb" />
 
-⭐ Admin Special Entry<br>
+⭐ Admin Special Entry<br<br>>
 <img src="https://github.com/user-attachments/assets/9a1dd4b3-4d17-4461-89a0-4bd5936011f0" />
 
-🔥 Circuit Breaker in Action<br>
+🔥 Circuit Breaker in Action<br><br>
 <img src="https://github.com/user-attachments/assets/e5ab5faa-2192-4347-a90d-4bf995284446" />
 
 ▶️ How to Run Locally
@@ -124,3 +124,18 @@ Separate security configurations for user and admin services
 1.Start Eureka Server<br>
 2.Start all microservices<br>
 3.Test APIs using Postman
+
+👨‍💻 Author
+
+Rahul Chakradhari
+Java Backend Developer | Microservices | Spring Boot
+
+📍 Location:Bengaluru , Karnataka 
+📞 Phone: +91 83058 25263
+📧 Email: rahulchakradhari10september@gmail.com
+🔗 LinkedIn: [https://www.linkedin.com/in/rahulchakradhari](https://www.linkedin.com/in/rahul-chakradhari-17a437217/)
+💻 GitHub: [https://github.com/](https://github.com/rahul-chakradhari)
+
+
+⭐ If you found this project useful
+Feel free to ⭐ star the repository or reach out for collaboration, feedback, or opportunities.
