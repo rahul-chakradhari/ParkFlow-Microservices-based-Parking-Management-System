@@ -113,7 +113,7 @@ Separate security configurations for user and admin services
 🚪 User Exit<br><br>
 <img src="https://github.com/user-attachments/assets/0c277908-3c1b-4b48-b297-b4ff0b9f1afb" />
 
-⭐ Admin Special Entry<br<br>>
+⭐ Special Entry through Admin<br><br>
 <img src="https://github.com/user-attachments/assets/9a1dd4b3-4d17-4461-89a0-4bd5936011f0" />
 
 🔥 Circuit Breaker in Action<br><br>
