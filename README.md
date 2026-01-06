@@ -125,17 +125,17 @@ Separate security configurations for user and admin services
 2.Start all microservices<br>
 3.Test APIs using Postman
 
-👨‍💻 Author
+👨‍💻 Author<br>
 
-Rahul Chakradhari
-Java Backend Developer | Microservices | Spring Boot
+Rahul Chakradhari<br>
+Java Backend Developer | Microservices | Spring Boot<br>
 
-📍 Location:Bengaluru , Karnataka 
-📞 Phone: +91 83058 25263
-📧 Email: rahulchakradhari10september@gmail.com
-🔗 LinkedIn: [https://www.linkedin.com/in/rahulchakradhari](https://www.linkedin.com/in/rahul-chakradhari-17a437217/)
-💻 GitHub: [https://github.com/](https://github.com/rahul-chakradhari)
+📍 Location:Bengaluru , Karnataka <br>
+📞 Phone: +91 83058 25263<br>
+📧 Email: rahulchakradhari10september@gmail.com<br>
+🔗 LinkedIn: [https://www.linkedin.com/in/rahulchakradhari](https://www.linkedin.com/in/rahul-chakradhari-17a437217/)<br>
+💻 GitHub: [https://github.com/](https://github.com/rahul-chakradhari)<br>
 
 
-⭐ If you found this project useful
+⭐ If you found this project useful<br>
 Feel free to ⭐ star the repository or reach out for collaboration, feedback, or opportunities.
