@@ -130,7 +130,7 @@ Separate security configurations for user and admin services
 Rahul Chakradhari<br>
 Java Backend Developer | Microservices | Spring Boot<br>
 
-📍 Location:Bengaluru , Karnataka <br>
+📍 Location: Bengaluru , Karnataka <br>
 📞 Phone: +91 83058 25263<br>
 📧 Email: rahulchakradhari10september@gmail.com<br>
 🔗 LinkedIn: [https://www.linkedin.com/in/rahulchakradhari](https://www.linkedin.com/in/rahul-chakradhari-17a437217/)<br>
