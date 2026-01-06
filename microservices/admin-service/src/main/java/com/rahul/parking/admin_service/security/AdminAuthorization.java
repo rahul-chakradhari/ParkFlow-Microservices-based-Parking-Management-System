@@ -8,17 +8,19 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class AdminAuthorization {
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        //used method chaining  for seq of filters for every HTTP req for authorization
         http
-                .authorizeHttpRequests(a->a
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/").permitAll()
-                .anyRequest().authenticated()
-                )
-                .formLogin(Customizer.withDefaults());
+                .csrf(csrf -> csrf.disable())
+                .formLogin(form -> form.disable())
+                .httpBasic(basic -> basic.disable())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/admin/**").permitAll()
+                        .anyRequest().permitAll()
+                );
+
         return http.build();
     }
-
 }
+

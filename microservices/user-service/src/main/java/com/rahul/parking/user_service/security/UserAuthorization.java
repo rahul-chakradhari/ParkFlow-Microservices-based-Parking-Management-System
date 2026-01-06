@@ -13,11 +13,14 @@ public class UserAuthorization {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         //used method chaining  for seq of filters for every HTTP req for authorization
         http
+                .csrf(csrf->csrf.disable())
+                .formLogin(form->form.disable())
+                .httpBasic(basic->basic.disable())
                 .authorizeHttpRequests(a->a
-                        .requestMatchers("/user/**").hasAnyRole("USER","ADMIN")
+                        .requestMatchers("/user/**").permitAll()
                         .requestMatchers("/").permitAll()
                         .anyRequest().authenticated()
-                ).formLogin(Customizer.withDefaults());
+                );
         return http.build();
     }
 
