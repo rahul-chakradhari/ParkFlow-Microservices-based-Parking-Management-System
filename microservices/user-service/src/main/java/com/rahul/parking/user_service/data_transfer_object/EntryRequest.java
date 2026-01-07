@@ -1,8 +1,13 @@
 package com.rahul.parking.user_service.data_transfer_object;
 
 import com.rahul.parking.user_service.enums.VehicleType;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 public class EntryRequest{
+
+    @Schema(
+            description = "request obj used at the time of user entry"
+    )
     //variables
     private String ticketId;
     private String slotId;

@@ -1,7 +1,13 @@
 package com.rahul.parking.parking_service.enums;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 
 public enum VehicleType {
-    TWO_WHEELER,THREE_WHEELER,FOUR_WHEELER
+    @Schema(
+            description = "Type of vehicle types supported by the system"
+    )
+    TWO_WHEELER,
+    THREE_WHEELER,
+    FOUR_WHEELER
 }
 

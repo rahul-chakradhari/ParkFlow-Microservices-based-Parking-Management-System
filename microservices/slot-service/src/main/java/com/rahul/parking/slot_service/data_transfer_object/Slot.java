@@ -1,8 +1,13 @@
 package com.rahul.parking.slot_service.data_transfer_object;
 
 import com.rahul.parking.slot_service.enums.VehicleType;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 public class Slot {
+
+    @Schema(
+            description = "slot obj for slot service"
+    )
     //variables
     private String id;
     private VehicleType vehicleType;

@@ -69,7 +69,8 @@ public class ParkingService {
         if(lastSuccessfulSlotResponse!=null){
             response.setSlotId(lastSuccessfulSlotResponse.getId());
             response.setParking(true);
-            response.setMessage("Slot is down.Currently retrieving data from previous successful cache data.");
+            response.setMessage("Slot service is down.Currently retrieving data from previous successful cache data.");
+            return  response;
         }
         response.setParking(false);
         response.setMessage("Slot service unavailable.Please try again after sometimes");
@@ -119,7 +120,7 @@ public class ParkingService {
         }
 
     // pricing service fallback mechanism
-    public TicketResponse paymentFallBack(ExitRequest request,Throwable ex){
+    public TicketResponse paymentFallback(ExitRequest request,Throwable ex){
     TicketResponse response = new TicketResponse();
         response.setTicketId(request.getTicketId());
         response.setSlotId(request.getSlotId());

@@ -4,8 +4,12 @@ package com.rahul.parking.admin_service.data_transfer_object;
 
 import com.rahul.parking.admin_service.enums.AdminActionType;
 import com.rahul.parking.admin_service.enums.VehicleType;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 public class AdminRequest {
+    @Schema(
+            description = "Request object used for performing admin actions"
+    )
     //variables
     private AdminActionType adminActionType;
     private String ticketId;

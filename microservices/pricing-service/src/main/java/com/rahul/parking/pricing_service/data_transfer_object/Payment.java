@@ -1,6 +1,11 @@
 package com.rahul.parking.pricing_service.data_transfer_object;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class Payment {
+    @Schema(
+            description = "Payment obj created during pricing service"
+    )
     //variables
     private String id;
     private String ticketId;

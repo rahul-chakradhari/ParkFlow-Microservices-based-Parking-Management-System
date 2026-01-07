@@ -1,6 +1,12 @@
 package com.rahul.parking.user_service.data_transfer_object;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class TicketResponse {
+
+    @Schema(
+           description = "ticket response received after entry"
+    )
     //variables
     private String ticketId;
     private String message;

@@ -1,7 +1,11 @@
 package com.rahul.parking.parking_service.data_transfer_object;
 
-public class PaymentResponse {
+import io.swagger.v3.oas.annotations.media.Schema;
 
+public class PaymentResponse {
+    @Schema(
+            description = "payment obj at the time of exit from  parking"
+    )
     //variables
     private String id;
     private String ticketId;

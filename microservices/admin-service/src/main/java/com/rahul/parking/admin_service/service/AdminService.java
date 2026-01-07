@@ -2,8 +2,9 @@
 package com.rahul.parking.admin_service.service;
 import com.rahul.parking.admin_service.data_transfer_object.AdminRequest;
 import com.rahul.parking.admin_service.data_transfer_object.AdminResponse;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class AdminService {
 
     public AdminResponse processAdminRequest(AdminRequest request)
@@ -25,10 +26,12 @@ public class AdminService {
                 break;
             case SPECIAL_ENTRY:
                 response.setSuccess(true);
+                response.setResolved(true);
                 response.setMessage("Special Entry is allowed for  vehicle "+request.getVehicleNumber()+"("+request.getVehicleType()+")");
                 break;
             case TICKET_REGENERATE:
                 response.setSuccess(true);
+                response.setResolved(true);
                 //generating specific admin request reference
                 String referenceId = "ADMIN-" + System.currentTimeMillis();
                 response.setReferenceId(referenceId);
@@ -41,7 +44,6 @@ public class AdminService {
 
         }
 
-        response.setSuccess(true);
         return response;
 
     }

@@ -1,7 +1,13 @@
 
 package com.rahul.parking.admin_service.data_transfer_object;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class AdminResponse {
+
+    @Schema(
+            description = "response returned after performing admin operations"
+    )
     //variables
     private boolean success;
     private String message;
