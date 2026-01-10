@@ -86,18 +86,20 @@ Separate security configurations for user and admin services
 <img src="https://github.com/user-attachments/assets/41c57d44-144f-41a5-9868-6e0512e237f5" />
 
 ⚔️ Challenges & Solutions<br>
-| **Challenge**                                                | **Solution**                                                                              |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| Inter-service communication between multiple microservices   | Implemented **Eureka Discovery Server** for dynamic service registration and discovery    |
-| Calling other microservices from one service                 | Used **Spring RestTemplate** to enable synchronous REST-based inter-service communication |
-| Hardcoded service URLs causing tight coupling                | Replaced hardcoded URLs with **service names resolved via Eureka Discovery Server**       |
-| Service failure causing cascading failures                   | Implemented **Circuit Breaker pattern using Resilience4j** to ensure fault tolerance      |
-| Handling downstream service downtime gracefully              | Added **fallback mechanisms** to return safe responses during service outages             |
-| Securing microservices and APIs                              | Implemented **Spring Security** with **role-based authorization (ADMIN, USER)**           |
-| Repetitive boilerplate code (getters, setters, constructors) | Reduced boilerplate using **Project Lombok annotations**                                  |
-| API testing and documentation for microservices              | Integrated **Swagger / OpenAPI** for interactive API documentation                        |
-| Maintaining loose coupling between services                  | Followed **Microservices Architecture principles** with independent services              |
-| Manual API testing during development                        | Used **Postman** for request validation and debugging                                     |
+| **Challenge**                                                                       | **Solution**                                                                                         |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Selecting a stable and industry-standard Java version for microservices development | Used **Java 17 (LTS)** for long-term support, better performance, and compatibility with Spring Boot |
+| Inter-service communication between multiple microservices                          | Implemented **Eureka Discovery Server** for dynamic service registration and discovery               |
+| Calling other microservices from one service                                        | Used **Spring RestTemplate** for synchronous REST-based inter-service communication                  |
+| Avoiding hardcoded service URLs                                                     | Resolved service endpoints dynamically using **Eureka service names**                                |
+| Handling service failures without cascading impact                                  | Implemented **Circuit Breaker pattern using Resilience4j**                                           |
+| Providing fault tolerance during downstream failures                                | Added **fallback mechanisms** for graceful degradation                                               |
+| Securing APIs across microservices                                                  | Applied **Spring Security with role-based authorization (ADMIN, USER)**                              |
+| Reducing repetitive boilerplate code                                                | Used **Project Lombok** to auto-generate getters, setters, and constructors                          |
+| API visibility and documentation                                                    | Integrated **Swagger / OpenAPI** for API documentation and testing                                   |
+| Ensuring scalability and loose coupling                                             | Followed **Microservices Architecture best practices**                                               |
+| Manual API testing during development                                               | Used **Postman** for request validation and debugging                                                |
+
 
 
 📘 API Documentation (Swagger) 📑<br>
