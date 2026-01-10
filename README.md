@@ -145,6 +145,7 @@ Separate security configurations for user and admin services
 🔑 JWT-based authentication<br>
 🗄️ Database persistence (MySQL)<br>
 🚪 API Gateway<br>
+🧰 Implement Global Exception Handler <br>
 ⚙️ Centralized configuration server<br>
 📊 Admin dashboard UI<br>
 
