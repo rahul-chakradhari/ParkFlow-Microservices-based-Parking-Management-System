@@ -103,7 +103,7 @@ Separate security configurations for user and admin services
 ✅ Clear request/response contracts 📄<br>
 ✅ Faster onboarding for developers 🚀<br>
 
-🧰 Lombok Usage 🛠️<br><br>
+🧰 Lombok Usage 🛠️<br>
 🔹 Integrated Lombok to reduce boilerplate code ✂️<br>
 🔹 Simplified DTOs and models using annotations 📦<br>
 🔹 Eliminated repetitive getters, setters, constructors, and builders 🔁<br>
