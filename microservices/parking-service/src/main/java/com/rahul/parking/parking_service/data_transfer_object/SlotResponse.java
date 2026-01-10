@@ -1,7 +1,13 @@
 package com.rahul.parking.parking_service.data_transfer_object;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class SlotResponse {
 
     @Schema(
@@ -12,36 +18,5 @@ public class SlotResponse {
     private String id;
     private String message;
 
-    //getters and setters
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public Boolean getOccupied() {
-        return occupied;
-    }
-    public void setOccupied(Boolean occupied) {
-        this.occupied = occupied;
-    }
-
-    //constructors
-    public SlotResponse() {
-    }
-
-    public SlotResponse(Boolean occupied, String id, String message) {
-        this.occupied = occupied;
-        this.id = id;
-        this.message = message;
-    }
 }

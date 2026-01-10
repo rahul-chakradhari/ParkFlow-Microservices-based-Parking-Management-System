@@ -5,7 +5,14 @@ package com.rahul.parking.admin_service.data_transfer_object;
 import com.rahul.parking.admin_service.enums.AdminActionType;
 import com.rahul.parking.admin_service.enums.VehicleType;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class AdminRequest {
     @Schema(
             description = "Request object used for performing admin actions"
@@ -20,55 +27,6 @@ public class AdminRequest {
     private String vehicleNumber;
     private VehicleType vehicleType;
 
-    //getters and setters
-    public String getVehicleNumber() {
-        return vehicleNumber;
-    }
-
-    public void setVehicleNumber(String vehicleNumber) {
-        this.vehicleNumber = vehicleNumber;
-    }
-
-    public VehicleType getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
-    public Integer getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
-
-    public AdminActionType getAdminActionType() {
-        return adminActionType;
-    }
-
-    public void setAdminActionType(AdminActionType adminActionType) {
-        this.adminActionType = adminActionType;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getTicketId() {
-        return ticketId;
-    }
-
-    public void setTicketId(String ticketId) {
-        this.ticketId = ticketId;
-    }
-
     //constructors
     public AdminRequest(AdminActionType adminActionType, Integer amount, String description, String ticketId, String vehicleNumber, VehicleType vehicleType) {
         this.adminActionType = adminActionType;
@@ -77,8 +35,6 @@ public class AdminRequest {
         this.ticketId = ticketId;
         this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
-    }
-    public AdminRequest() {
     }
 }
 

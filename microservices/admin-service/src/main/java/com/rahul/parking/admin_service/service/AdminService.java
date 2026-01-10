@@ -4,6 +4,8 @@ import com.rahul.parking.admin_service.data_transfer_object.AdminRequest;
 import com.rahul.parking.admin_service.data_transfer_object.AdminResponse;
 import org.springframework.stereotype.Service;
 
+import static com.rahul.parking.admin_service.enums.AdminActionType.*;
+
 @Service
 public class AdminService {
 
@@ -48,4 +50,3 @@ public class AdminService {
 
     }
 }
-

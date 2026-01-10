@@ -31,7 +31,7 @@ public class ParkingService {
 
         //slot service call
         Vehicle vehicle = new Vehicle();
-        vehicle.setvehicleNumber(request.getvehicleNumber());
+        vehicle.setVehicleNumber(request.getVehicleNumber());
         vehicle.setVehicleType(request.getVehicleType());
 
         HttpHeaders headers = new HttpHeaders();
@@ -83,9 +83,9 @@ public class ParkingService {
         TicketResponse response = new TicketResponse();
         //basic validation
         if (request == null || request.getTicketId() == null || request.getSlotId() == null) {
-           response.setMessage("Invalid Request");
-           response.setParking(true);
-           return response;
+            response.setMessage("Invalid Request");
+            response.setParking(true);
+            return response;
         }
 
         //calling payment service at the time of exit
@@ -97,7 +97,7 @@ public class ParkingService {
                 );
 
         //checking if payment was not done
-        if (paymentResponse == null ||  !paymentResponse.getPaymentStatus()) {
+        if (paymentResponse == null ||  !paymentResponse.isPaymentStatus()) {
             response.setMessage("Payment failed.vehicle not allowed to exit.");
             response.setParking(true);
             return response;
@@ -107,7 +107,7 @@ public class ParkingService {
         Slot slot = new Slot();
         slot.setId(request.getSlotId());
 
-         restTemplate.postForObject(
+        restTemplate.postForObject(
                 "http://slot-service/slot/release",
                 slot,
                 String.class
@@ -117,11 +117,11 @@ public class ParkingService {
         response.setSlotId(request.getSlotId());
         response.setMessage("vehicle exited successfully");
         return response;
-        }
+    }
 
     // pricing service fallback mechanism
     public TicketResponse paymentFallback(ExitRequest request,Throwable ex){
-    TicketResponse response = new TicketResponse();
+        TicketResponse response = new TicketResponse();
         response.setTicketId(request.getTicketId());
         response.setSlotId(request.getSlotId());
         response.setParking(false);

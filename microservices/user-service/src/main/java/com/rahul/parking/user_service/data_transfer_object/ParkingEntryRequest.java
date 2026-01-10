@@ -1,6 +1,6 @@
 package com.rahul.parking.user_service.data_transfer_object;
 
-import io.swagger.v3.oas.annotations.media.Schema;
+import com.rahul.parking.user_service.enums.VehicleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,14 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class TicketResponse {
+public class ParkingEntryRequest {
 
-    @Schema(
-           description = "ticket response received after entry"
-    )
     //variables
     private String ticketId;
-    private String message;
-
+    private String slotId;
+    private VehicleType vehicleType;
 
 }

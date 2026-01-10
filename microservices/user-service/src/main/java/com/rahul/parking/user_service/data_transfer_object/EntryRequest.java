@@ -2,7 +2,13 @@ package com.rahul.parking.user_service.data_transfer_object;
 
 import com.rahul.parking.user_service.enums.VehicleType;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class EntryRequest{
 
     @Schema(
@@ -14,48 +20,6 @@ public class EntryRequest{
     private String vehicleNumber;
     private VehicleType vehicleType;
 
-    //getters and setters
-    public String getSlotId() {
-        return slotId;
-    }
 
-    public void setSlotId(String slotId) {
-        this.slotId = slotId;
-    }
-
-    public String getTicketId() {
-        return ticketId;
-    }
-
-    public void setTicketId(String ticketId) {
-        this.ticketId = ticketId;
-    }
-
-    public String getVehicleNumber() {
-        return vehicleNumber;
-    }
-
-    public void setVehicleNumber(String vehicleNumber) {
-        this.vehicleNumber = vehicleNumber;
-    }
-
-    public VehicleType getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
-    //constructors
-    public EntryRequest() {
-    }
-
-    public EntryRequest(String ticketId,String slotId,String vehicleNumber, VehicleType vehicleType) {
-        this.ticketId = ticketId;
-        this.slotId = slotId;
-        this.vehicleNumber = vehicleNumber;
-        this.vehicleType = vehicleType;
-    }
 }
 
