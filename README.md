@@ -92,7 +92,7 @@ Separate security configurations for user and admin services
 | Over-engineering risk | Scoped features intentionally |
 | Securing APIs         | Role-based access control     |
 
-📘 API Documentation (Swagger) 📑<br><br>
+📘 API Documentation (Swagger) 📑<br>
 🔹 All services expose Swagger UI for easy API exploration and testing<br>
 🔹 Swagger is enabled using Springdoc OpenAPI<br>
 🔹 Each microservice provides interactive API documentation at:<br>
