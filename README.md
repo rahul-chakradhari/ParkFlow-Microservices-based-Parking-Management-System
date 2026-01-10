@@ -92,6 +92,24 @@ Separate security configurations for user and admin services
 | Over-engineering risk | Scoped features intentionally |
 | Securing APIs         | Role-based access control     |
 
+📘 API Documentation (Swagger) 📑
+🔹 All services expose Swagger UI for easy API exploration and testing
+🔹 Swagger is enabled using Springdoc OpenAPI
+🔹 Each microservice provides interactive API documentation at:
+👉 http://localhost:<port>/swagger-ui.html 🌐
+
+✨ This allows:
+✅ Easy API testing without Postman 🧪
+✅ Clear request/response contracts 📄
+✅ Faster onboarding for developers 🚀
+
+🧰 Lombok Usage 🛠️
+🔹 Integrated Lombok to reduce boilerplate code ✂️
+🔹 Simplified DTOs and models using annotations 📦
+🔹 Eliminated repetitive getters, setters, constructors, and builders 🔁
+🔹 Improved code readability and maintainability 📈
+🔹 No impact on runtime performance ⚡
+
 🚀 Future Enhancements<br>
 🔑 JWT-based authentication<br>
 🗄️ Database persistence (MySQL)<br>
