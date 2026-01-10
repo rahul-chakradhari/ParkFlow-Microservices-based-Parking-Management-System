@@ -110,12 +110,6 @@ Separate security configurations for user and admin services
 🔹 Improved code readability and maintainability 📈<br>
 🔹 No impact on runtime performance ⚡
 
-🚀 Future Enhancements<br>
-🔑 JWT-based authentication<br>
-🗄️ Database persistence (MySQL)<br>
-🚪 API Gateway<br>
-⚙️ Centralized configuration server<br>
-📊 Admin dashboard UI<br>
 
 📸 Screenshots<br>
 🧠 Complete Architecture Diagram<br><br>
@@ -136,6 +130,13 @@ Separate security configurations for user and admin services
 
 🔥 Circuit Breaker in Action<br><br>
 <img src="https://github.com/user-attachments/assets/e5ab5faa-2192-4347-a90d-4bf995284446" />
+
+🚀 Future Enhancements<br>
+🔑 JWT-based authentication<br>
+🗄️ Database persistence (MySQL)<br>
+🚪 API Gateway<br>
+⚙️ Centralized configuration server<br>
+📊 Admin dashboard UI<br>
 
 ▶️ How to Run Locally
 
