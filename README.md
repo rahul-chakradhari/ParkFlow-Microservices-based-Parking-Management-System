@@ -86,11 +86,19 @@ Separate security configurations for user and admin services
 <img src="https://github.com/user-attachments/assets/41c57d44-144f-41a5-9868-6e0512e237f5" />
 
 ⚔️ Challenges & Solutions<br>
-| Challenge             | Solution                      |
-| --------------------- | ----------------------------- |
-| Service failure       | Circuit breaker with fallback |
-| Over-engineering risk | Scoped features intentionally |
-| Securing APIs         | Role-based access control     |
+| **Challenge**                                                | **Solution**                                                                              |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| Inter-service communication between multiple microservices   | Implemented **Eureka Discovery Server** for dynamic service registration and discovery    |
+| Calling other microservices from one service                 | Used **Spring RestTemplate** to enable synchronous REST-based inter-service communication |
+| Hardcoded service URLs causing tight coupling                | Replaced hardcoded URLs with **service names resolved via Eureka Discovery Server**       |
+| Service failure causing cascading failures                   | Implemented **Circuit Breaker pattern using Resilience4j** to ensure fault tolerance      |
+| Handling downstream service downtime gracefully              | Added **fallback mechanisms** to return safe responses during service outages             |
+| Securing microservices and APIs                              | Implemented **Spring Security** with **role-based authorization (ADMIN, USER)**           |
+| Repetitive boilerplate code (getters, setters, constructors) | Reduced boilerplate using **Project Lombok annotations**                                  |
+| API testing and documentation for microservices              | Integrated **Swagger / OpenAPI** for interactive API documentation                        |
+| Maintaining loose coupling between services                  | Followed **Microservices Architecture principles** with independent services              |
+| Manual API testing during development                        | Used **Postman** for request validation and debugging                                     |
+
 
 📘 API Documentation (Swagger) 📑<br>
 🔹 All services expose Swagger UI for easy API exploration and testing<br>
